@@ -6,8 +6,10 @@ const TodoContext =  React.createContext();
   const {
     item: todos,
     saveItem: saveTodos,
+    sincronizeItem: sincronizeTodos,
     loading,
     error,
+    sincronizeItem
   } = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue]= React.useState('');
@@ -72,6 +74,7 @@ const TodoContext =  React.createContext();
     deleteTodo,
     openModal,
     setOpenModal,
+    sincronizeTodos,
   }
  };
  export { useTodos };
